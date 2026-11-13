@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <rect width="120" height="120" rx="18" fill="#0a0a0b"/>
+  <g transform="translate(12 14) scale(0.8)" fill="#f5b419">
+    <path fill-rule="evenodd" d="M60 15 C69 15 74 19 78 23 L106 6 L101 40 C100 56 95 72 86 87 C78 98 69 105 60 108 C51 105 42 98 34 87 C25 72 20 56 19 40 L14 6 L42 23 C46 19 51 15 60 15 Z
+           M31 52 L51 44 L49 58 L34 61 Z
+           M89 52 L69 44 L71 58 L86 61 Z
+           M60 54 L77 70 L73 92 L60 102 L47 92 L43 70 Z"/>
+  </g>
+</svg>
