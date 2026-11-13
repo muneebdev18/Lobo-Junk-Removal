@@ -148,7 +148,7 @@ export default function Hero() {
             <div className="relative">
               <div className="cut-top-right relative overflow-hidden border border-line-invert bg-ink-2">
                 <Image
-                  src={media.heroTruck}
+                  src={media.trailer}
                   alt="LOBO dump truck unloading a load on a job site"
                   width={1200}
                   height={1500}
