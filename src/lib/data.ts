@@ -99,7 +99,7 @@ export const services: Service[] = [
     ],
     tags: ["Same-day", "By the load", "Free quote"],
     image:
-      "https://images.pexels.com/photos/20706506/pexels-photo-20706506.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/s-01.jpg",
     imageAlt: "Movers loading boxes into a truck on a sunny day",
   },
   {
@@ -116,7 +116,7 @@ export const services: Service[] = [
     ],
     tags: ["Residential", "Commercial", "Same-day"],
     image:
-      "https://images.pexels.com/photos/11382360/pexels-photo-11382360.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/s-02.jpg",
     imageAlt: "Overstuffed garage workshop before a property cleanup",
   },
   {
@@ -133,7 +133,7 @@ export const services: Service[] = [
     ],
     tags: ["HD814 trailer", "Delivery", "By the day"],
     image:
-      "https://images.pexels.com/photos/15370207/pexels-photo-15370207.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/s-03.jpg",
     imageAlt: "Dump truck loaded with materials parked beside a building",
   },
   {
@@ -150,7 +150,7 @@ export const services: Service[] = [
     ],
     tags: ["Hillside ready", "Flushing", "Annual or one-off"],
     image:
-      "https://images.pexels.com/photos/38524253/pexels-photo-38524253.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/s-04.jpg",
     imageAlt: "Worker on a residential roof clearing debris from a gutter line",
   },
   {
@@ -167,7 +167,7 @@ export const services: Service[] = [
     ],
     tags: ["Leaf piles", "Storm cleanup", "Hauled away"],
     image:
-      "https://images.pexels.com/photos/40886612/pexels-photo-40886612.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/s-05.jpg",
     imageAlt: "Worker in protective gear clearing fallen leaves with a leaf blower",
   },
   {
@@ -184,7 +184,7 @@ export const services: Service[] = [
     ],
     tags: ["Chip on request", "Hillside lots", "Hauled"],
     image:
-      "https://images.pexels.com/photos/28934929/pexels-photo-28934929.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/s-06.jpg",
     imageAlt: "Dump truck carrying cut branches away from a property",
   },
   {
@@ -201,7 +201,7 @@ export const services: Service[] = [
     ],
     tags: ["Residential", "Commercial", "Haul included"],
     image:
-      "https://images.pexels.com/photos/5125783/pexels-photo-5125783.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/s-07.jpg",
     imageAlt: "Excavator moving demolition debris on a residential site",
   },
   {
@@ -218,7 +218,7 @@ export const services: Service[] = [
     ],
     tags: ["HD814", "Rent by the day", "Delivery"],
     image:
-      "https://images.pexels.com/photos/10304035/pexels-photo-10304035.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "/trailer.jpeg",
     imageAlt: "Dump trailer parked on a roadside ready for rental",
   },
 ];
