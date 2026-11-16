@@ -6,7 +6,7 @@ import { business, contactChannels, media } from "@/lib/data";
 export const metadata = {
   title: "Contact — Get a Free Junk Removal Quote",
   description:
-    "Call LOBO Junk Removal at (707) 472-9902 or send photos for a free junk removal, hauling, and property cleanup quote across Napa Valley.",
+    "Call LOBO Junk Removal at (707) 472-9902 or send photos for a free junk removal, hauling, and property cleanup quote across the South Bay, the San Fernando Valley, and Ventura.",
 };
 
 export default function ContactPage() {

@@ -8,7 +8,7 @@ export const business = {
   phoneHref: "tel:+17074729902",
   email: "Plata.rafav@gmail.com",
   emailHref: "mailto:Plata.rafav@gmail.com",
-  region: "Napa Valley & the North Bay",
+  region: "Los Angeles & the South Bay",
   trailerModel: "HD814",
   trailerLabel: "Dumpster Trailer Rentals (HD814 Model)",
 } as const;
@@ -42,10 +42,10 @@ export const media = {
     "/hero-crew.jpg",
   aboutCrew:
     "/about-crew.jpg",
-  areasVineyard:
-    "/area-vy.jpg",
-  areasAutumn:
-    "/area-aut.jpg",
+  areasCoast:
+    "/area-coast.jpg",
+  areasShore:
+    "/area-shore.jpg",
   trailer:
     "/trailer.jpeg",
   dumpsterSite:
@@ -141,7 +141,7 @@ export const services: Service[] = [
     code: "S-04",
     title: "Gutter Cleanup",
     tagline: "Let the water go somewhere else.",
-    body: "Napa hillsides collect leaves fast. We pull the debris out of the gutters, flush the downspouts, and check the hangers so overflow stops tearing down your fascia and foundation.",
+    body: "South Bay hillsides collect leaves fast. We pull the debris out of the gutters, flush the downspouts, and check the hangers so overflow stops tearing down your fascia and foundation.",
     bullets: [
       "Downspouts flushed and cleared end to end",
       "Gutter guards removed, cleaned, and refitted",
@@ -318,59 +318,152 @@ export const trailerUses = [
 ] as const;
 
 /* ---------------------------------------------------------------------------
- * Service areas
+ * Service areas — South Bay, San Fernando Valley and Ventura
  * ------------------------------------------------------------------------- */
 
-export const serviceAreas = [
+export type ServiceArea = {
+  region: string;
+  note: string;
+  cities: readonly string[];
+  image: string;
+  imageAlt: string;
+};
+
+export const serviceAreas: ServiceArea[] = [
   {
-    region: "Napa Valley",
-    note: "Our home turf. Same-day service, lowest rates, no trip charge.",
+    region: "Calabasas",
+    note: "Conejo Valley homes, ranches, and equestrian properties cleared every week.",
     cities: [
-      "Napa",
-      "Yountville",
-      "Oakville",
-      "Rutherford",
-      "St. Helena",
-      "Calistoga",
-      "Glen Ellen",
-      "American Canyon",
+      "Agoura Hills",
+      "Westlake Village",
+      "Oak Park",
+      "Hidden Hills",
+      "Bell Canyon",
+      "Point Dume",
     ],
+    image: "/area-calabasas.jpg",
+    imageAlt: "Tree-lined suburban home in Calabasas, California",
   },
   {
-    region: "Sonoma County",
-    note: "Vineyard properties, ranch parcels, and suburban rentals handled daily.",
+    region: "Ventura",
+    note: "Harbor town rentals, pier-side walk-ups, and Channel Islands harbor jobs.",
     cities: [
-      "Sonoma",
-      "Santa Rosa",
-      "Petaluma",
-      "Rohnert Park",
-      "Sebastopol",
-      "Windsor",
-      "Healdsburg",
-      "Cotati",
-      "Sonoma Valley",
+      "Oxnard",
+      "Port Hueneme",
+      "Santa Paula",
+      "Simi Valley",
+      "Moorpark",
+      "Somis",
     ],
+    image: "/area-ventura.jpg",
+    imageAlt: "Aerial view of the Ventura coastline and coastal town",
   },
   {
-    region: "Solano & East Bay",
-    note: "Flat-out cleanups, material hauling, and light demolition.",
+    region: "San Fernando",
+    note: "City lots, apartment buildings, and storefronts cleared the same day.",
     cities: [
-      "Vallejo",
-      "Benicia",
-      "Fairfield",
-      "Vacaville",
-      "Suisun City",
-      "Martinez",
-      "Concord",
-      "Richmond",
+      "Sylmar",
+      "Pacoima",
+      "Panorama City",
+      "Mission Hills",
+      "Sepulveda",
+      "Northridge",
     ],
+    image: "/area-san-fernando.jpg",
+    imageAlt: "The vintage James Restaurant sign in San Fernando, California",
   },
   {
-    region: "Marin & North Bay",
-    note: "Estate cleanouts, brush removal, and hillside lot clearing.",
-    cities: ["Novato", "San Rafael", "San Anselmo", "Mill Valley", "Tiburon", "Fairfax", "San Pablo"],
+    region: "Canoga Park",
+    note: "Valley neighborhoods, garage resets, and full estate cleanouts handled weekly.",
+    cities: [
+      "Chatsworth",
+      "Winnetka",
+      "Woodland Hills",
+      "West Hills",
+      "Topanga",
+      "Northridge",
+    ],
+    image: "/area-canoga-park.jpg",
+    imageAlt: "Aerial view of the parks and ball fields around Canoga Park",
   },
-] as const;
+  {
+    region: "South Bay",
+    note: "Torrance, Redondo Beach, Palos Verdes, and the beach cities — our busiest route.",
+    cities: [
+      "Torrance",
+      "Redondo Beach",
+      "Palos Verdes",
+      "Manhattan Beach",
+      "Hermosa Beach",
+      "El Segundo",
+      "Inglewood",
+      "Carson",
+      "Gardena",
+      "Hawthorne",
+      "Culver City",
+      "Playa del Rey",
+    ],
+    image: "/area-south-bay.jpg",
+    imageAlt: "Families walking along the Redondo Beach Pier in the South Bay",
+  },
+  {
+    region: "North Hollywood",
+    note: "Studio-area apartments, walk-ups, and busy commercial strips loaded out fast.",
+    cities: [
+      "Studio City",
+      "Burbank",
+      "Universal City",
+      "Highland Park",
+      "Sun Valley",
+      "Toluca Lake",
+    ],
+    image: "/area-north-hollywood.jpg",
+    imageAlt: "The Universal Studios globe in North Hollywood, California",
+  },
+  {
+    region: "Van Nuys",
+    note: "Industrial parks, apartment complexes, and warehouse cleanouts by the load.",
+    cities: [
+      "Sherman Oaks",
+      "Encino",
+      "Tarzana",
+      "Reseda",
+      "Valley Village",
+      "Lake Balboa",
+    ],
+    image: "/area-van-nuys.jpg",
+    imageAlt: "Tree-lined Van Nuys avenue with mountains in the distance",
+  },
+  {
+    region: "Malibu",
+    note: "Coastal homes, Point Dume estates, and storm debris cleared after the surf.",
+    cities: [
+      "Point Dume",
+      "Carbon Beach",
+      "Paradise Cove",
+      "Latigo Point",
+      "Malibu Colony",
+      "Trancas Highlands",
+    ],
+    image: "/area-malibu.jpg",
+    imageAlt: "Malibu Pier stretching into the Pacific Ocean",
+  },
+  {
+    region: "Porter Ranch",
+    note: "Hillside homes, new-build move-outs, and ranch parcels handled the same week.",
+    cities: [
+      "Santa Clarita",
+      "Castaic",
+      "Stevenson Ranch",
+      "Saugus",
+      "Valencia",
+      "Newhall",
+    ],
+    image: "/area-porter-ranch.jpg",
+    imageAlt: "Hillside homes of Porter Ranch at sunset",
+  },
+];
+
 
 /* ---------------------------------------------------------------------------
  * Testimonials
@@ -380,7 +473,7 @@ export const testimonials = [
   {
     name: "Maria Castellanos",
     role: "Homeowner",
-    project: "Estate cleanout — St. Helena",
+    project: "Estate cleanout — Calabasas",
     image:
       "https://images.pexels.com/photos/35968859/pexels-photo-35968859.jpeg?auto=compress&cs=tinysrgb&w=400",
     imageAlt: "Maria Castellanos",
@@ -390,7 +483,7 @@ export const testimonials = [
   {
     name: "Derek Osei",
     role: "Property Manager",
-    project: "12 units — Napa",
+    project: "12 units — Van Nuys",
     image:
       "https://images.pexels.com/photos/5334146/pexels-photo-5334146.jpeg?auto=compress&cs=tinysrgb&w=400",
     imageAlt: "Derek Osei",
@@ -400,7 +493,7 @@ export const testimonials = [
   {
     name: "Alana Whitfield",
     role: "Estate Manager",
-    project: "Vacation rental group — Sonoma",
+    project: "Vacation rental group — Malibu",
     image:
       "https://images.pexels.com/photos/7048506/pexels-photo-7048506.jpeg?auto=compress&cs=tinysrgb&w=400",
     imageAlt: "Alana Whitfield",
@@ -430,7 +523,7 @@ export const faqs = [
   },
   {
     q: "How fast can you come out?",
-    a: "Call before noon on a weekday and we can usually clear it the same day. We run the route tight across Napa, Sonoma, and Solano, so most jobs land inside a 24-hour window.",
+    a: "Call before noon on a weekday and we can usually clear it the same day. We run the route tight across the South Bay, the San Fernando Valley, and Ventura, so most jobs land inside a 24-hour window.",
   },
   {
     q: "What will you take?",
@@ -479,7 +572,7 @@ export const contactChannels = [
     label: "Service Area",
     value: business.region,
     href: "/service-areas",
-    note: "Napa, Sonoma & Solano",
+    note: "South Bay · Valley · Ventura",
   },
 ] as const;
 

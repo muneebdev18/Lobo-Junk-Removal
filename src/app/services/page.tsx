@@ -6,7 +6,7 @@ import { business, media, services, tickerWords } from "@/lib/data";
 export const metadata = {
   title: "Services — Junk Removal, Hauling, Cleanup & Demo",
   description:
-    "Junk removal, property cleanup, material hauling, gutter cleanup, leaf removal, brush removal, light demolition, and HD814 dumpster trailer rentals across Napa Valley, Sonoma, and Solano.",
+    "Junk removal, property cleanup, material hauling, gutter cleanup, leaf removal, brush removal, light demolition, and HD814 dumpster trailer rentals across the South Bay, the San Fernando Valley, and Ventura.",
 };
 
 export default function ServicesPage() {

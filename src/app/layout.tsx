@@ -29,25 +29,25 @@ const barlow = Barlow_Condensed({
 export const metadata: Metadata = {
   metadataBase: new URL("https://lobojunkremoval.com"),
   title: {
-    default: "LOBO Junk Removal — Junk Removal & Property Cleanup | Napa Valley",
+    default: "LOBO Junk Removal — Junk Removal & Property Cleanup | South Bay",
     template: "%s | LOBO Junk Removal",
   },
   description:
-    "LOBO Junk Removal clears junk, cleans properties, hauls materials, clears gutters, rakes leaves, removes brush, and does light demolition across Napa, Sonoma, and Solano. Same-day service. Call (707) 472-9902.",
+    "LOBO Junk Removal clears junk, cleans properties, hauls materials, clears gutters, rakes leaves, removes brush, and does light demolition across the South Bay, the San Fernando Valley, and Ventura. Same-day service. Call (707) 472-9902.",
   keywords: [
-    "junk removal Napa",
-    "property cleanup Napa Valley",
-    "material hauling Napa",
-    "gutter cleanup Napa",
-    "leaf removal Napa",
-    "brush removal Napa",
-    "light demolition Napa",
+    "junk removal South Bay",
+    "property cleanup Los Angeles",
+    "material hauling South Bay",
+    "gutter cleanup Los Angeles",
+    "leaf removal South Bay",
+    "brush removal San Fernando Valley",
+    "light demolition Ventura",
     "dumpster trailer rental HD814",
   ],
   openGraph: {
     title: "LOBO Junk Removal — Let Us Handle the Junk!",
     description:
-      "Junk removal, property cleanup, hauling, and dumpster trailer rentals across Napa Valley. Same-day service, affordable pricing, eco-friendly disposal.",
+      "Junk removal, property cleanup, hauling, and dumpster trailer rentals across the South Bay. Same-day service, affordable pricing, eco-friendly disposal.",
     type: "website",
     locale: "en_US",
     images: [

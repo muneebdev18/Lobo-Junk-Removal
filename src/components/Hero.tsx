@@ -66,7 +66,7 @@ export default function Hero() {
     <section
       id="top"
       ref={root}
-      className="grain relative isolate overflow-hidden bg-ink pb-0 pt-[74px] text-on-ink md:pt-[82px]"
+      className="grain relative isolate overflow-hidden bg-ink pb-0 pt-[90px] text-on-ink md:pt-[124px]"
       aria-label="LOBO Junk Removal"
     >
       {/* Deep background plate */}
@@ -82,7 +82,7 @@ export default function Hero() {
           <div className="lg:col-span-7">
             <span className="hero-eyebrow dim-label inline-flex w-fit items-center gap-2.5 border border-line-invert bg-ink/60 px-3.5 py-2 text-muted-invert backdrop-blur-sm">
               <span className="h-1.5 w-1.5 bg-gold" aria-hidden />
-              Napa Valley · Sonoma · Solano
+              South Bay · San Fernando Valley · Ventura
             </span>
 
             <h1 className="display mt-8 text-[clamp(2.9rem,9vw,6.4rem)] text-on-ink">

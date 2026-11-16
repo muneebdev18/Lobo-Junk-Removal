@@ -27,7 +27,7 @@ export default function ServiceAreas() {
       });
 
       ScrollTrigger.batch(".area-block", {
-        start: "top 90%",
+        start: "top 92%",
         once: true,
         onEnter: (batch) => {
           gsap.from(batch, {
@@ -48,7 +48,7 @@ export default function ServiceAreas() {
     <section
       id="areas"
       ref={root}
-      className="relative overflow-hidden bg-paper py-24 text-ink md:py-32"
+      className="relative bg-paper py-24 text-ink md:py-32"
       aria-labelledby="areas-heading"
     >
       <div className="mx-auto max-w-[1400px] px-5 md:px-8">
@@ -61,14 +61,14 @@ export default function ServiceAreas() {
             >
               We cover the
               <br />
-              North Bay
+              South Bay
             </h2>
           </div>
           <div className="md:col-span-5">
             <p className="text-base leading-relaxed text-muted md:text-lg">
-              Napa Valley is home. We run out across Sonoma, Solano, Marin, and
-              the East Bay every week — and if you are just outside the list,
-              call anyway. We probably cover you too.
+              The South Bay is home. We run out across the San Fernando Valley,
+              the beach cities, and Ventura every week — and if you are just
+              outside the list, call anyway. We probably cover you too.
             </p>
             <Link
               href="/service-areas"
@@ -87,33 +87,48 @@ export default function ServiceAreas() {
 
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-4">
-            <div className="cut-corner relative overflow-hidden">
+            <div className="cut-corner relative overflow-hidden lg:sticky lg:top-[140px]">
               <Image
-                src={media.areasVineyard}
-                alt="Vineyard hills in the Napa Valley"
+                src={media.areasCoast}
+                alt="Pacific coastline and cliffs above Malibu"
                 width={1000}
                 height={1250}
-                className="h-[300px] w-full object-cover md:h-[420px] lg:h-full lg:min-h-[520px]"
+                className="h-[300px] w-full object-cover md:h-[420px] lg:h-[560px]"
                 sizes="(max-width: 1024px) 100vw, 32vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <p className="dim-label text-gold">Home base</p>
                 <p className="display mt-2 text-2xl text-on-ink">
-                  Napa Valley, California
+                  South Bay, California
                 </p>
               </div>
             </div>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:col-span-8">
-            {serviceAreas.map((area) => (
-              <div
+            {serviceAreas.map((area, i) => (
+              <article
                 key={area.region}
-                className="area-block border-t-2 border-ink pt-6 transition-colors duration-300 hover:border-gold"
+                className="area-block group flex flex-col border-t-2 border-ink transition-colors duration-300 hover:border-gold"
               >
-                <h3 className="display text-2xl text-ink">{area.region}</h3>
-                <p className="mt-2.5 max-w-sm text-sm leading-relaxed text-muted">
+                <div className="relative mt-6 h-[210px] w-full overflow-hidden">
+                  <Image
+                    src={area.image}
+                    alt={area.imageAlt}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 32vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-transparent" />
+                  <span className="dim-label absolute right-4 top-4 text-gold">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="display absolute inset-x-0 bottom-0 p-5 text-2xl text-on-ink">
+                    {area.region}
+                  </h3>
+                </div>
+                <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
                   {area.note}
                 </p>
                 <ul className="mt-5 flex flex-wrap gap-1.5">
@@ -126,7 +141,7 @@ export default function ServiceAreas() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </article>
             ))}
           </div>
         </div>

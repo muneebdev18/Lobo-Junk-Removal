@@ -66,7 +66,7 @@ export default function SiteFooter() {
         <div className="grid gap-12 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-4">
             <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.png" alt={`${business.name}`} width={180} height={90} />
+            <Image src="/logo.png" alt={`${business.name}`} width={612} height={408} className="h-auto w-[220px]" />
               {/* <WolfMark className="h-12 w-12 text-gold" />
               <span className="flex flex-col leading-none">
                 <span className="wordmark text-2xl">LOBO</span>
@@ -76,8 +76,9 @@ export default function SiteFooter() {
               </span> */}
             </Link>
             <p className="mt-6 max-w-sm text-base leading-relaxed text-muted-invert">
-              Owner-operated junk removal and property cleanup across the Napa
-              Valley, Sonoma County, and Solano. Founded by {business.founder}.
+              Owner-operated junk removal and property cleanup across the South
+              Bay, the San Fernando Valley, and Ventura. Founded by{" "}
+              {business.founder}.
             </p>
             <div className="mt-7 space-y-2.5 text-sm">
               <a
@@ -147,9 +148,9 @@ export default function SiteFooter() {
               ))}
             </ul>
             <p className="dim-label mt-6 leading-relaxed text-muted-invert/70">
-              Napa · St. Helena · Sonoma · Petaluma
+              Calabasas · Ventura · San Fernando
               <br />
-              Vallejo · Benicia · Novato
+              Malibu · Van Nuys · North Hollywood
             </p>
             <Link
               href="/service-areas"
@@ -176,7 +177,7 @@ export default function SiteFooter() {
               </Link>
             ))}
             <span className="dim-label text-muted-invert/60">
-              Owner-operated · Napa Valley
+              Owner-operated · South Bay
             </span>
           </nav>
         </div>

@@ -59,7 +59,7 @@ export default function SiteHeader() {
           : "border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-[74px] max-w-[1400px] items-center justify-between gap-6 px-5 md:h-[100px] md:px-8">
+      <div className="mx-auto flex h-[90px] max-w-[1400px] items-center justify-between gap-6 px-5 md:h-[124px] md:px-8">
         <Link
           href="/"
           className="shrink-0"
@@ -67,7 +67,14 @@ export default function SiteHeader() {
           onClick={() => setOpen(false)}
         >
           {/* <Logo className="gap-2.5" /> */}
-          <Image src="/logo.png" alt={`${business.name}`} width={150} height={60} />
+          <Image
+            src="/logo.png"
+            alt={`${business.name}`}
+            width={612}
+            height={408}
+            priority
+            className="h-auto w-[135px] md:w-[186px]"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">

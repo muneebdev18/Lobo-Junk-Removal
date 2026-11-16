@@ -10,9 +10,9 @@ import {
 } from "@/lib/data";
 
 export const metadata = {
-  title: "Dumpster Trailer Rentals — HD814 Model | Napa Valley",
+  title: "Dumpster Trailer Rentals — HD814 Model | South Bay",
   description:
-    "Rent the LOBO HD814 dump trailer by the day. Delivered to your driveway across Napa Valley, Sonoma, and Solano — with or without haul service.",
+    "Rent the LOBO HD814 dump trailer by the day. Delivered to your driveway across the South Bay, the San Fernando Valley, and Ventura — with or without haul service.",
 };
 
 export default function DumpsterRentalsPage() {

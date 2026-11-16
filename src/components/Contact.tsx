@@ -375,7 +375,7 @@ export default function Contact() {
                         autoComplete="postal-code"
                         onChange={handleChange}
                         className="field"
-                        placeholder="Napa, 94558"
+                        placeholder="Torrance, 90503"
                       />
                     </label>
                   </div>

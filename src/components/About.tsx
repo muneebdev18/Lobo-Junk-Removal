@@ -15,7 +15,7 @@ const pillars = [
     v: "You talk to the person who does the work. No call center, no account manager, no runaround.",
   },
   {
-    k: "Napa Valley based",
+    k: "South Bay based",
     v: "We are on the road every day, so same-day service is a real schedule and not a promise.",
   },
   {
