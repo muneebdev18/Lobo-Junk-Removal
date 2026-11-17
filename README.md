@@ -5,7 +5,7 @@ property cleanup company serving Napa Valley, Sonoma County, Solano, and Marin.
 
 - **Founder:** Rafael Villalobos
 - **Phone:** (707) 472-9902
-- **Email:** Plata.rafav@gmail.com
+- **Email:** lobojunkremover@gmail.com
 
 ## Stack
 
@@ -40,6 +40,25 @@ and `.cut-corner` utilities in `src/app/globals.css`.
 
 Business copy, services, FAQs, testimonials, service areas, and imagery URLs all
 live in `src/lib/data.ts`.
+
+## Contact form email
+
+The quote form posts to `src/app/api/contact/route.ts`, which emails every
+submission (with photo attachments) to **lobojunkremover@gmail.com** via
+[Resend](https://resend.com). To enable it:
+
+1. Sign up at resend.com using **lobojunkremover@gmail.com** and create an
+   API key (free tier: 3,000 emails/month).
+2. Copy `.env.example` to `.env.local` and paste the key into
+   `RESEND_API_KEY`.
+3. Restart the dev server / redeploy.
+
+The default sender (`onboarding@resend.dev`) only delivers to the Resend
+account owner's address, which is exactly where the mail needs to go. To
+send from your own domain, verify it in Resend and set `CONTACT_FROM_EMAIL`.
+
+Submissions are validated server-side, honeypot-protected against bots, and
+capped at 5 files / 5 MB each.
 
 ## Commands
 

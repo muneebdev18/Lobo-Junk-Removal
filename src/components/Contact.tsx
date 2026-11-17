@@ -104,7 +104,7 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (sending) return;
     if (!validate()) {
@@ -112,10 +112,34 @@ export default function Contact() {
       return;
     }
     setSending(true);
-    window.setTimeout(() => {
-      setSending(false);
+    setErrors((prev) => {
+      const n = { ...prev };
+      delete n.submit;
+      return n;
+    });
+    try {
+      const fd = new FormData(e.currentTarget);
+      const res = await fetch("/api/contact", { method: "POST", body: fd });
+      const data = (await res.json().catch(() => ({}))) as { error?: string };
+      if (!res.ok) {
+        setErrors((prev) => ({
+          ...prev,
+          submit:
+            data.error ??
+            "Something went wrong sending your request. Please call us instead.",
+        }));
+        return;
+      }
       setSubmitted(true);
-    }, 900);
+    } catch {
+      setErrors((prev) => ({
+        ...prev,
+        submit:
+          "Could not reach the server. Check your connection or call us instead.",
+      }));
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -247,7 +271,12 @@ export default function Contact() {
                     <button
                       type="button"
                       className="dim-label border border-ink px-6 py-3 text-ink transition-colors hover:bg-ink hover:text-on-ink"
-                      onClick={() => setSubmitted(false)}
+                      onClick={() => {
+                        setSubmitted(false);
+                        setFiles([]);
+                        setNotesLen(0);
+                        formRef.current?.reset();
+                      }}
                     >
                       Send another request
                     </button>
@@ -307,6 +336,15 @@ export default function Contact() {
                     })}
                   </div>
                   <input type="hidden" name="type" value={jobType} />
+                  {/* Honeypot — hidden from humans, bots fill it */}
+                  <input
+                    type="text"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="pointer-events-none absolute left-[-9999px] top-[-9999px] h-0 w-0 opacity-0"
+                  />
 
                   <div className="mt-9 grid gap-5 md:grid-cols-2">
                     <label className="field-group">
@@ -424,6 +462,7 @@ export default function Contact() {
                     <span className="field-label">Photos (optional, up to 5)</span>
                     <input
                       type="file"
+                      name="files"
                       multiple
                       accept=".pdf,.jpg,.jpeg,.png"
                       onChange={handleFileChange}
@@ -441,6 +480,15 @@ export default function Contact() {
                       </p>
                     )}
                   </label>
+
+                  {errors.submit && (
+                    <p
+                      role="alert"
+                      className="mt-6 border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700"
+                    >
+                      {errors.submit}
+                    </p>
+                  )}
 
                   <div className="mt-9 flex flex-col items-start gap-5 border-t border-line pt-7 sm:flex-row sm:items-center sm:justify-between">
                     <p className="max-w-[19rem] text-xs leading-relaxed text-muted">
