@@ -166,6 +166,9 @@ export default function SiteFooter() {
           <p className="dim-label text-muted-invert">
             © 2026 {business.name}. All rights reserved.
           </p>
+          <span className="dim-label font-extrabold text-gold">
+              Designed By LogoAmerica.us
+            </span>
           <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2">
             {navLinks.map((l) => (
               <Link
@@ -176,9 +179,8 @@ export default function SiteFooter() {
                 {l.label}
               </Link>
             ))}
-            <span className="dim-label text-muted-invert/60">
-              Owner-operated · South Bay
-            </span>
+            
+            
           </nav>
         </div>
       </div>
